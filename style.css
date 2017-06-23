@@ -17,6 +17,10 @@ a:hover {
 
 header { font-size: 1.1em; }
 
+section {
+    max-width: 60em;
+}
+
 section#intro {
     font-size: 1.1em;
     margin: 1em 4em;
@@ -47,6 +51,8 @@ header h2::after {
 .vcard {
     float: right;
     padding-left: 2em;
+    position: relative;
+    z-index: 1;
 }
 
 .vcard img {
@@ -99,6 +105,10 @@ li li li::before {
     top: -.725ex;
 }
 
+footer {
+    margin-top: 3em;
+}
+
 @media only screen and (max-width: 1023px) {
     .vcard img {
         width: 320px;
@@ -145,6 +155,12 @@ li li li::before {
     header h2::before,
     header h2::after { content: ""; }
     section#intro { margin: 0.5ex; }
+}
+
+@media not print {
+    footer .print {
+        display: none;
+    }
 }
 
 @media print {
