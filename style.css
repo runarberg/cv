@@ -1,200 +1,222 @@
 body {
-    background: #2D3747;
-    color: #E1E1DA;
-    font-family: "Playfair Display", serif;
-    font-size: 20px;
-    margin-bottom: 8em;
+  background: #2d3747;
+  color: #e1e1da;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  margin: 0 auto 8em;
+  max-width: 120ch;
 }
 
 a {
-    color: #DBBC66;
-    text-decoration: none;
+  color: #dbbc66;
+  text-decoration: none;
 }
 
 a:hover {
-    color: #D97128;
+  color: #d97128;
 }
 
-header { font-size: 1.1em; }
+header {
+  font-size: 1.1em;
+}
 
 section {
-    max-width: 60em;
+  max-width: 60em;
 }
 
 section#intro {
-    font-size: 1.1em;
-    margin: 1em 4em;
-    max-width: 42em;
+  font-size: 1.1em;
+  margin: 1em 4em;
+  max-width: 42em;
 }
 
-header h1, header h2 {
-    text-align: center;
+header h1,
+header .tagline {
+  text-align: center;
 }
 
 header h1 {
-    color: #FFAD29;
-    margin-bottom: 0.3ex;
+  color: #ffad29;
+  margin-bottom: 0.3ex;
 }
 
-header h2 {
-    color: #06EDE1;
-    font-style: italic;
-    font-weight: normal;
-    margin-top: 0.3ex;
+header .tagline {
+  align-items: center;
+  color: #06ede1;
+  display: flex;
+  font-size: 1.35em;
+  font-style: italic;
+  font-weight: normal;
+  margin-top: 0.3ex;
+  justify-content: center;
 }
 
-header h2::before,
-header h2::after {
-    content: "—";
+header .tagline::before,
+header .tagline::after {
+  content: "—";
 }
 
 .vcard {
-    float: right;
-    padding-left: 2em;
-    position: relative;
-    z-index: 1;
+  float: right;
+  padding-left: 2em;
+  position: relative;
+  z-index: 1;
 }
 
 .vcard img {
-    border: 3px solid #E1E1DA;
-    border-radius: 2em;
+  border: 3px solid #e1e1da;
+  border-radius: 2em;
 }
 
 .vcard a {
-    color: inherit;
+  color: inherit;
 }
 
 dl {
-    margin: 1em 2em;
+  margin: 1em 2em;
 }
 dt {
-    color: #FFAD29;
-    font-weight: bold;
+  color: #ffad29;
+  font-weight: bold;
 }
 
 h2 {
-    margin: 1em;
-    color: #06EDE1;
+  margin: 1em;
+  color: #06ede1;
 }
 
 li {
-    list-style: none;
-    position: relative;
+  list-style: none;
+  position: relative;
 }
 li li {
-    font-size: 0.95em;
+  font-size: 0.95em;
 }
 li li li {
-    font-size: 0.9em;
+  font-size: 0.9em;
 }
 li::before {
-    content: "•";
-    color: #FFAD29;
-    display: block;
-    position: absolute;
-    left: -1.1ex;
-    top: -0.833ex;
-    font-size: 2em;
+  content: "•";
+  color: #ffad29;
+  display: block;
+  position: absolute;
+  left: -1.1ex;
+  top: -0.833ex;
+  font-size: 2em;
 }
 li li::before {
-    content: "–";
+  content: "–";
 }
 li li li::before {
-    content: "⋅";
-    left: -.75ex;
-    top: -.725ex;
+  content: "⋅";
+  left: -0.75ex;
+  top: -0.725ex;
 }
 
 footer {
-    margin-top: 3em;
+  margin-top: 3em;
 }
 
 @media only screen and (max-width: 1023px) {
-    .vcard img {
-        width: 320px;
-    }
+  .vcard img {
+    width: 320px;
+  }
 }
 
 @media only screen and (max-width: 860px) {
-    .vcard {
-        max-width: 280px;
-        margin: 0 auto;
-        padding: 0;
-    }
-    .vcard img {
-        width: 280px;
-    }
+  .vcard {
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .vcard img {
+    width: 280px;
+  }
 }
 
 @media only screen and (max-width: 760px) {
-    body {
-        display: flex;
-        flex-flow: column;
-    }
-    h2 {
-        text-align: center;
-    }
-    header { order: 1; }
-    .vcard {
-        order: 2;
-        float: none;
-        text-align: center;
-    }
-    section { order: 3; }
-    dl, dt, dd {
-        margin: 0;
-    }
-    dd + dt {
-        margin-top: 1em;
-    }
+  body {
+    display: flex;
+    flex-flow: column;
+  }
+  .tagline {
+    text-align: center;
+  }
+  header {
+    order: 1;
+  }
+  .vcard {
+    order: 2;
+    float: none;
+    text-align: center;
+  }
+  section {
+    order: 3;
+  }
+  dl,
+  dt,
+  dd {
+    margin: 0;
+  }
+  dd + dt {
+    margin-top: 1em;
+  }
 }
 
 @media only screen and (max-width: 520px) {
-    header h1 { font-size: 1.5em; }
-    header h2 { font-size: 1.1em; }
-    header h2::before,
-    header h2::after { content: ""; }
-    section#intro { margin: 0.5ex; }
+  header h1 {
+    font-size: 1.5em;
+  }
+  header .tagline {
+    font-size: 1.1em;
+  }
+  section#intro {
+    margin: 0.5ex;
+  }
 }
 
 @media not print {
-    footer .print {
-        display: none;
-    }
+  footer .print {
+    display: none;
+  }
 }
 
 @media print {
-    body {
-        font-size: 12pt;
-        color: black;
-    }
+  body {
+    font-size: 12pt;
+    color: black;
+  }
 
-    header h1, header h2, h2, dt,
-    li::before {
-        color: black;
-    }
+  header h1,
+  header .tagline,
+  h2,
+  dt,
+  li::before {
+    color: black;
+  }
 
-    a {
-        color: #CCC;
-        border-bottom: 1px dotted #CCC;
-    }
+  a[href^="http"] {
+    color: #ccc;
+    border-bottom: 1px dotted #ccc;
+  }
 
-    header {
-        margin: 1em 0.5ex;
-    }
+  header {
+    margin: 1em 0.5ex;
+  }
 
-    header h2::before,
-    header h2::after {
-        content: "";
-    }
+  header .tagline::before,
+  header .tagline::after {
+    content: "";
+  }
 
-    .vcard {
-        width: 60.25mm;
-        font-size: 10pt;
-    }
-    .vcard img {
-        width: 52.5mm;
-        height: 52.5mm;
-        border-color: black;
-    }
+  .vcard {
+    width: 60.25mm;
+    font-size: 10pt;
+  }
+
+  .vcard img {
+    width: 52.5mm;
+    height: 52.5mm;
+    border-color: black;
+  }
 }
