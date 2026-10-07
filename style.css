@@ -219,4 +219,8 @@ footer {
     height: 52.5mm;
     border-color: black;
   }
+
+  #skills {
+    break-before: page;
+  }
 }
