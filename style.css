@@ -25,9 +25,9 @@ section {
 }
 
 section#intro {
-  font-size: 1.1em;
-  margin: 1em 4em;
-  max-width: 42em;
+  font-size: 1em;
+  margin-block: 1em;
+  max-inline-size: 42em;
 }
 
 header h1,
@@ -61,11 +61,6 @@ header .tagline::after {
   padding-left: 2em;
   position: relative;
   z-index: 1;
-}
-
-.vcard img {
-  border: 3px solid #e1e1da;
-  border-radius: 2em;
 }
 
 .vcard a {
@@ -111,6 +106,12 @@ li li li::before {
   content: "⋅";
   left: -0.75ex;
   top: -0.725ex;
+}
+
+.job-description {
+  font-size: 0.85em;
+  margin-block: 0;
+  margin-inline-start: 1ex;
 }
 
 footer {
